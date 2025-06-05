@@ -6,5 +6,29 @@ assets = { directory = "node_modules/r2-explorer/dashboard", binding = "ASSETS",
 # Bind R2 Buckets to your application.
 # Docs: https://r2explorer.com/getting-started/add-r2-buckets/
 [[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "bucket"
+binding = "sd-chat"
+bucket_name = "sd-chat"
+
+[[r2_buckets]]
+binding = "sundae-red-images"
+bucket_name = "sundae-red-images"
+
+[[r2_buckets]]
+binding = "scrapes"
+bucket_name = "scrapes"
+
+[[r2_buckets]]
+binding = "screenshots"
+bucket_name = "screenshots"
+
+[[r2_buckets]]
+binding = "videos"
+bucket_name = "videos"
+
+[[r2_buckets]]
+binding = "images"
+bucket_name = "images"
+
+[[r2_buckets]]
+binding = "documents"
+bucket_name = "documents"

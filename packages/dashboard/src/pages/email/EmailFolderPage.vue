@@ -35,7 +35,7 @@
           <template v-slot:header>
             <tr class="q-mb-md">
               <th class="text-left">
-                <q-btn color="green" icon="refresh" :loading="loading" @click="fetchFiles">
+                <q-btn color="#423fad" icon="refresh" :loading="loading" @click="fetchFiles">
                   <template v-slot:loading>
                     <q-spinner
                       color="white"

@@ -12,7 +12,7 @@
 
         <template v-if="editMode">
           <q-btn icon="delete" label="Cancel" size="md" class="q-ml-md" color="red" dense @click="cancelEdit" />
-          <q-btn icon="save" label="Save" size="md" class="q-ml-md" color="green" dense @click="saveEdit" />
+          <q-btn icon="save" label="Save" size="md" class="q-ml-md" color="#423fad" dense @click="saveEdit" />
         </template>
         <template v-else>
           <q-btn icon="edit" label="edit" size="md" class="q-ml-md" color="orange" dense @click="enableEdit" />

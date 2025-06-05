@@ -81,7 +81,7 @@ export default {
 
   .upload-complete {
     text-align: end;
-    color: green;
+    color: #423fad;
   }
 }
 </style>

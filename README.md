@@ -1,3 +1,31 @@
+🔄 Your New Development Workflow
+Now when you want to make style changes:
+
+1. Edit the Dashboard Source Code
+
+# Make your style changes in:
+
+packages/dashboard/src/
+
+2. Rebuild and Update Template
+
+pnpm run build-dashboard # Build your changes
+pnpm run build-worker # Copy dashboard to worker package
+cd template && npm install
+
+3. Test Your Changes
+
+cd template
+pnpm dev # or npm run dev
+
+🎨 Where to Make Style Changes
+
+The dashboard uses Quasar Framework (Vue.js), so you can edit:
+
+CSS files: packages/dashboard/src/css/
+Component styles: packages/dashboard/src/components/
+Layout styles: packages/dashboard/src/layouts/
+
 <div align="center">
   <a href="https://r2explorer.com/">
     <img src="https://raw.githubusercontent.com/G4brym/R2-explorer/refs/heads/main/packages/docs/pages/assets/r2-explorer-logo.png" width="500" height="auto" alt="R2-Explorer"/>
@@ -43,11 +71,13 @@ R2-Explorer transforms your Cloudflare R2 storage experience with a modern, user
 ## Key Features
 
 - **🔒 Security**
+
   - Basic Authentication support
   - Cloudflare Access integration
   - Self-hosted on your Cloudflare account
 
 - **📁 File Management**
+
   - Drag-and-drop file upload
   - Folder creation and organization
   - Multi-part upload for large files
@@ -55,6 +85,7 @@ R2-Explorer transforms your Cloudflare R2 storage experience with a modern, user
   - HTTP/Custom metadata editing
 
 - **👀 File Handling**
+
   - In-browser file preview
     - PDF documents
     - Images
@@ -92,12 +123,14 @@ For detailed instructions on maintaining and updating your installation, visit o
 We're actively working on these exciting features:
 
 - **File Management**
+
   - Support for bucket names with spaces
   - File search functionality
   - Folder renaming capability
   - Image thumbnails generation
 
 - **AI Integration**
+
   - Object detection using workers-ai
 
 - **User Experience**
