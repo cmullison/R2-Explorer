@@ -13,7 +13,8 @@
 		"deploy-dashboard-dev": "pnpm run --filter r2-explorer-dashboard deploy-dev",
 		"deploy-dev-worker": "pnpm run --filter r2-explorer-dev-worker deploy",
 		"package": "pnpm run --filter r2-explorer package",
-		"publish-npm": "pnpm run --filter r2-explorer publish-npm"
+		"publish-npm": "pnpm run --filter r2-explorer publish-npm",
+    "sendit": "pnpm run build-dashboard && pnpm run build-worker && cd template && npm install && pnpm run deploy"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",

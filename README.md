@@ -1,4 +1,8 @@
 🔄 Your New Development Workflow
+
+IF YOU ARE DONE EDITING AND WANT TO SEND IT THEN USE:
+pnpm run build-dashboard && pnpm run build-worker && cd template && npm install && pnpm run deploy
+
 Now when you want to make style changes:
 
 1. Edit the Dashboard Source Code

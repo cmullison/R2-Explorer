@@ -43,8 +43,8 @@
         </q-menu>
       </q-btn>
 
-      <q-btn class="q-mb-sm" @click="gotoFiles" color="blue" icon="folder_copy" label="Files" stack />
-      <q-btn class="q-mb-sm" @click="gotoEmail" color="blue" icon="email" label="Email" stack />
+      <q-btn class="q-mb-sm" @click="gotoFiles" color="primary" icon="folder_copy" label="Files" stack />
+      <q-btn class="q-mb-sm" @click="gotoEmail" color="primary" icon="email" label="Email" stack />
 
       <q-btn class="q-mb-sm q-mt-auto q-mb-0" @click="infoPopup=true" color="secondary" icon="question_mark"
              label="Info"
@@ -54,27 +54,24 @@
 
   <q-dialog v-model="infoPopup" persistent no-route-dismiss>
     <q-card>
-      <q-card-section>
-        <div class="text-h6">🎉 Thank you for using R2-Explorer! 🚀</div>
-      </q-card-section>
 
       <q-card-section class="q-pt-none">
-        You are running version <b>{{ mainStore.version }}</b><br>
-        <template v-if="updateAvailable">
-          Latest version is <b>{{latestVersion}}</b>, learn how to <a href="https://r2explorer.com/getting-started/updating-your-project/" target="_blank">update your instance here</a>.<br>
-        </template>
         <br>
         <template v-if="mainStore.auth">
           <b>Authentication</b><br>
-          Method: {{ mainStore.auth.type }}<br>
-          Username: {{ mainStore.auth.username }}
+          User: {{ mainStore.auth.username }}
         </template>
         <template v-else>
           Not authenticated
         </template>
         <br><br>
-        <b>Server Configuration</b><br>
-        {{ JSON.stringify(mainStore.config, null, 2) }}
+        <b>Permissions</b><br>
+        {{ mainStore.config?.readonly === false ? "Full access" : "Read only" }}
+        <br><br>
+        App version: <b>{{ mainStore.version }}</b><br>
+        <template v-if="updateAvailable">
+          Update to <b><a href="https://r2explorer.com/getting-started/updating-your-project/" target="_blank">{{latestVersion}}</a></b>.<br>
+        </template>
       </q-card-section>
 
       <q-card-actions align="right">
